@@ -1,0 +1,23 @@
+spring:
+  devtools:
+    enabled: true
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+      jdbc:
+        lob:
+          non_contextual_creation: true
+    hibernate:
+      ddl-auto: create
+      show-sql: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/inventory_management_service
+    username: postgres
+    password: postgres
+    initialization-mode: always
+    initialize: true
+    continue-on-error: true
